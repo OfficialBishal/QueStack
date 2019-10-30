@@ -1,0 +1,28 @@
+1. Describe Von Neumann Machine. Differentiate Hardwired control unit and Micro
+
+programmed control unit. [4+4]
+2. Draw the internal architecture of 8086 microprocessor and explain it. [8]
+3. How is looping is implement in 8085 programs? Explain how nested looping can be done.
+
+Elaborate with suitable example. [8]
+4. Write a program for 8085 to count the numbers for which upper nibble is higher than the
+
+lower nibble; and store the count at the end of table having 50 bytes data from C050H. [8]
+5. Explain the process of assembling, linking and executing of assembly language program.
+
+Differentiate one-pass and two pass assembler. [5+3]
+
+6. Write and assembly language program for 8086 to read a number (1 to 9 only) from user
+and calculate the factorial of it and display in decimal format. [8]
+
+7. What is instruction cycle and machine cycle? Explain the timing diagram instruction LXI
+B, AOSOH with necessary diagram. [2+6]
+
+8. Differentiate synchronous bus and asynchronous bus. Design an address decoding circuit
+to interface 4 KB ROM and 2KB RAM. The starting address is 4000 H. Use suitable
+
+decoder. [2+6]
+9. Differentiate polling vs. interrupt. Explain how interrupt vector table is used to handle
+interrupts in 8086 microprocessor. [2+6]
+
+10. What is pseudo and real parallelism? Explain Flynn's Classification. [4+4]
