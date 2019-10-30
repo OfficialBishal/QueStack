@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3c3842ab-cb05-4927-8849-5f869e76fcb3" name="Default" comment="" />
+    <list default="true" id="3c3842ab-cb05-4927-8849-5f869e76fcb3" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,11 +28,12 @@
   <component name="ProjectId" id="1SuvTMKtcv0lilxGtc143CBNbPD" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -170,7 +173,7 @@
       <workItem from="1572426823598" duration="107000" />
       <workItem from="1572427031696" duration="49000" />
       <workItem from="1572440531444" duration="6357000" />
-      <workItem from="1572452985218" duration="329000" />
+      <workItem from="1572452985218" duration="691000" />
     </task>
     <servers />
   </component>
