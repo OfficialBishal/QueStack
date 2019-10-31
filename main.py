@@ -48,18 +48,18 @@ while i < count_questions:
 print("-" * 200)
 
 i = 0
-while i < count_questions:
+while i < count_questions:                      # Questions List, i
     match_point = [0] * count_chapters
     j = 0
-    while j < count_chapters:
+    while j < count_chapters:                   # Chapters List, j
         count_keywords_words = len(keywords_words[j])
         k = 0
-        while k < count_keywords_words:
+        while k < count_keywords_words:         # Keywords Word, k
             if questions_lines[i].count(keywords_words[j][k]) != 0:
-                match_point[j] += questions_lines[i].count(keywords_words[j][k])
+                match_point[j] += 1 # questions_lines[i].count(keywords_words[j][k])
             k += 1
-        print(match_point)
         j += 1
+    print(f'{i}. {match_point}')
     max_value = max(match_point)
     i += 1
 

@@ -1,4 +1,4 @@
-CPU MPU Organization Microprocessor-Based System History Stored-Program Concept Von-Neumann Machine Harvard Architecture Evolution Processing Cycle Micro-Operations Microininstructions Control Unit Register Transfer Language RTL Applications.
+CPU MPU Organization Microprocessor-Based System History Stored-Program Concept Von Neumann Machine Harvard Architecture Evolution Processing Cycle Micro-Operations Microininstructions Control Unit Register Transfer Language RTL Applications.
 Internal Architecture 8085 microprocessor characters 8085 instruction Description Format Classification an instruction addressing modes time delay counter number conversion multiplication division 8085
 Internal Architecture 8086 microprocessor instructions 8086 operators 8086 coding assembly language assembling linking Executing .com programs .exe programs
 Pin Configuration bus structure machine cycle bus timing diagram read write bus timing diagrams memory devices address decoding put output devices bit baud rate standards serial I/o introduction to Direct Memory Access DMA DMA Controllers.
