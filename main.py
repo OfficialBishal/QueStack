@@ -62,6 +62,3 @@ while i < count_questions:                      # Questions List, i
     print(f'{i}. {match_point}')
     max_value = max(match_point)
     i += 1
-
-
-
