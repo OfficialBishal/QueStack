@@ -2,7 +2,7 @@ from PIL import Image
 
 from pytesseract import image_to_string
 
-path = '/Users/bishal/PycharmProjects/QueStack/images/'
+path = 'images/'
 img = Image.open(f"{path}image_file.png")
 text = image_to_string(img, lang='eng')
 

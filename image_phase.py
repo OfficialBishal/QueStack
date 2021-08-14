@@ -3,13 +3,13 @@ import os
 from PIL import Image
 from pytesseract import image_to_string
 
-image_path = '/Users/bishal/PycharmProjects/QueStack/images/'
-document_path = '/Users/bishal/PycharmProjects/QueStack/document/'
+image_path = 'images/'
+document_path = 'document/'
 
 
 def rename_files():
 
-    i = 0
+    i = 1
     for filename in os.listdir(image_path):
         dst = "image" + str(i) + ".png"
         src = image_path + filename
