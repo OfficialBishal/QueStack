@@ -8,8 +8,10 @@ def image_phase_processing():
     image_phase.count_files()
     image_phase.convert_images_to_text()
 
+
 #           Handling Keywords
 def handle_keywords():
+    global count_chapters, keywords_words
     fhandle = open(f'{document_path}keywords.txt')
     original_keywords = fhandle.read()
     count_chapters = len(open(f'{document_path}keywords.txt').readlines())
@@ -30,6 +32,7 @@ def handle_keywords():
 
 #           Handling Questions
 def handle_questions():
+    global count_chapters, keywords_words
     fhandle = open(f'{document_path}scannedquestion.txt')
     original_questions = fhandle.read()
     count_questions = len(open(f'{document_path}scannedquestion.txt').readlines())
@@ -66,4 +69,5 @@ def handle_questions():
 if __name__ == '__main__':
     print("Running...")
     image_phase_processing()
-    handle_keywords()
+    # handle_keywords()
+    # handle_questions()
