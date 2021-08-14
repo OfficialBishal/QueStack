@@ -3,6 +3,10 @@ import image_phase
 image_path = 'images/'
 document_path = 'document/'
 
+def image_phase_processing():
+    image_phase.rename_files()
+    image_phase.count_files()
+    image_phase.convert_images_to_text()
 
 #           Handling Keywords
 def handle_keywords():
@@ -11,17 +15,17 @@ def handle_keywords():
     count_chapters = len(open(f'{document_path}keywords.txt').readlines())
     fhandle.close()
 
-    print("-" * 200)
+    print("-" * 100)
     print(f"Total Number of Chapters: {count_chapters}")
-    # print("-"*200)
+    # print("-"*100)
     print("List of Chapters & their Keywords: ")
-    # print("-"*200)
+    # print("-"*100)
     keywords_lines = original_keywords.split("\n")
     keywords_words = original_keywords.split("\n")
     i = 0
     while i < count_chapters:
         keywords_words[i] = keywords_words[i].split()
-        # print(f"{i+1}. {keywords_words[i]}")
+        print(f"{i+1}. {keywords_words[i]}")
         i += 1
 
 #           Handling Questions
@@ -31,7 +35,7 @@ def handle_questions():
     count_questions = len(open(f'{document_path}scannedquestion.txt').readlines())
     fhandle.close()
 
-    print("-" * 200)
+    print("-" * 100)
     print(f"Total Number of Lines: {count_questions}")
     print("List of Questions: ")
     questions_lines = original_questions.split("\n")
@@ -41,7 +45,7 @@ def handle_questions():
         questions_words[i] = questions_words[i].split()
         # print(f"{i+1}. {questions_words[i]}")
         i += 1
-    print("-" * 200)
+    print("-" * 100)
 
     i = 0
     while i < count_questions:                      # Questions List, i
@@ -61,6 +65,5 @@ def handle_questions():
 
 if __name__ == '__main__':
     print("Running...")
-    image_phase.rename_files()
-    image_phase.count_files()
-    # image_phase.convert_images_to_text()
+    image_phase_processing()
+    handle_keywords()
