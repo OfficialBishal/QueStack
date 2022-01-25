@@ -38,4 +38,5 @@ def convert_images_to_text():
 
     with open(f"{document_path}scannedquestion.txt", mode='w') as file:
             file.write(initial_text)
-
+    print(
+        f'Successful: Questions(image) -> Questions(text)\nLocation: {document_path}scannedquestion.txt')
