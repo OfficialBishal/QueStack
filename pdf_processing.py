@@ -52,7 +52,7 @@ def pdf_to_text(page):
     # print("Total number of pages: ", pdfReader.numPages)
 
     text = ""
-    
+
     # creating a page object
     pageObj = pdfReader.getPage(page)
 
@@ -69,7 +69,7 @@ def filter(text):
 
     # Convert everything to lowercase
     text = text.lower()
-    
+
     # Get rid of unwanted symbols
     chars_to_remove = '.,:()-|'
     text = text.translate(str.maketrans('', '', chars_to_remove))
@@ -78,7 +78,7 @@ def filter(text):
     chars = ['a', 'an', 'the', 'by', 'is', 'as', 'with', 'and']
     for character in chars:
         text = text.replace(f" {character} ", " ")
-    
+
     # Get rid of single character
     text = ' '.join([w for w in text.split() if len(w) > 1])
 
@@ -100,7 +100,7 @@ def extract_keywords():
     start_page_no = [''] * num_chapters
     end_page_no = [''] * num_chapters
 
-    for i in range (num_chapters):
+    for i in range(num_chapters):
         start_page_no[i] = input(f"Starting page no. of Chapter {i+1}: ")
         end_page_no[i] = input(f"Ending page no. of Chapter {i+1}: ")
 
@@ -115,7 +115,7 @@ def extract_keywords():
 
     # Converting list to string
     keywords_final = '\n'.join([str(elem) for elem in keywords])
-    
+
     # Saving the keywords
     with open(f"{input_path}keywords.txt", mode='w') as file:
         file.write(keywords_final)

@@ -21,7 +21,7 @@ def rename_files():
 
 def count_files():
 
-    i=0
+    i = 0
     for filename in os.listdir(image_path):
         i += 1
     print(f"Total Number of images: {i}")
@@ -37,6 +37,6 @@ def convert_images_to_text():
         initial_text += text
 
     with open(f"{input_path}scannedquestion.txt", mode='w') as file:
-            file.write(initial_text)
+        file.write(initial_text)
     print(
         f'Successful: Questions(image) -> Questions(text)\nLocation: {input_path}scannedquestion.txt')
