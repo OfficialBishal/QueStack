@@ -1,0 +1,1 @@
+9. Differentiate polling vs. interrupt. Explain how interrupt vector table is used to handle interrupts in 8086 microprocessor. [2+6]

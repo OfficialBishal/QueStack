@@ -1,0 +1,1 @@
+1. Describe Von Neumann Machine. Differentiate Hardwired control unit and Microprogrammed control unit. [4+4]
