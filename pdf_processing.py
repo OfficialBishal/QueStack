@@ -1,6 +1,4 @@
 import os
-
-from numpy import int16
 import utils
 import PyPDF2
 
