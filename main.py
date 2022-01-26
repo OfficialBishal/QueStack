@@ -118,7 +118,7 @@ if __name__ == '__main__':
         handle_questions()
         save_questions()
     elif (mode == '2'):
-        print("-" * 100 + "\Automatic Mode")
+        print("-" * 100 + "\nAutomatic Mode")
         pdf_processing.main()
         handle_keywords()
         handle_questions()
