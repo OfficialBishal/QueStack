@@ -13,7 +13,7 @@ def image_phase_processing():
     image_phase.convert_images_to_text()    # Need to work on it (Not Finalized)
 
 
-#           Handling Keywords       -       Assuminng keywords.txt is derived from book
+#           Handling Keywords       -       Assuming keywords.txt is derived from book
 def handle_keywords():
     global count_chapters, keywords_words
     fhandle = open(f'{input_path}keywords.txt')
