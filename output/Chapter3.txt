@@ -1,3 +1,0 @@
-2. Draw the internal architecture of 8086 microprocessor and explain it. [8]
-5. Explain the process of assembling, linking and executing of assembly language program. Differentiate one-pass and two pass assembler. [5+3]
-6. Write and assembly language program for 8086 to read a number (1 to 9 only) from user and calculate the factorial of it and display in decimal format. [8]

@@ -7,28 +7,4 @@
 7. What is instruction cycle and machine cycle? Explain the timing diagram instruction LXIB, AOSOH with necessary diagram. [2+6]
 8. Differentiate synchronous bus and asynchronous bus. Design an address decoding circuit to interface 4 KB ROM and 2KB RAM. The starting address is 4000 H. Use suitable decoder. [2+6]
 9. Differentiate polling vs. interrupt. Explain how interrupt vector table is used to handle interrupts in 8086 microprocessor. [2+6]
-10. What is pseudo and real parallelism? Explain Flynn's Classification. [4+4]a)
-
-Compare and contrast between hardwired and microprogrammed CU.
-Write the RTL for instruction LX! H, 75H in 8085 microprocessor.
-Draw the programming model of 8085 and explain each unit.
-Explain the operations and uses of AST instructions in 8085.
-Write an ALP in 8085 to transfer 20 bytes of data in a table to another table by
-interchanging D, and D, bits of each byte.
-Explain the different types of addressing modes available in 8086 microprocessor with
-examples.
-Write an ALP in 8086 to read a word and display all the alphabets in alternate case (first
-alphabet in lowercase, second in uppercase, third in lowercase and so on) in a clear
-window.
-Design the address decoding interface of an output port consisting of 8 LEDs with port
-address ABH.
-Explain different modes of operation in 8255. .
-Explain the execution of instruction ANI 4BH in 8085 with the help of timing diagram.
-Describe the operation of interrupt instruction RIM in 8085 microprocessor.
-Explain the Interrupt processing in 8086 microprocessor.
-Write the characteristics of RISC..
-Explain six stage pipeline technique with an example.
-Write short notes on any two:
-a) One pass and two pass assembler
-b) DMA Controller
-c) OS and Its features
+10. What is pseudo and real parallelism? Explain Flynn's Classification. [4+4]

@@ -1,2 +1,0 @@
-3. How is looping is implement in 8085 programs? Explain how nested looping can be done. Elaborate with suitable example. [8]
-4. Write a program for 8085 to count the numbers for which upper nibble is higher than the lower nibble; and store the count at the end of table having 50 bytes data from C050H. [8]

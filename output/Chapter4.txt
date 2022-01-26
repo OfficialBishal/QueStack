@@ -1,2 +1,0 @@
-7. What is instruction cycle and machine cycle? Explain the timing diagram instruction LXIB, AOSOH with necessary diagram. [2+6]
-8. Differentiate synchronous bus and asynchronous bus. Design an address decoding circuit to interface 4 KB ROM and 2KB RAM. The starting address is 4000 H. Use suitable decoder. [2+6]

@@ -1,7 +1,11 @@
 import image_phase
+import utils
+import pdf_processing
 
 image_path = 'images/'
-document_path = 'document/'
+input_path = 'inputs/'
+output_path = 'outputs/'
+
 
 def image_phase_processing():
     image_phase.rename_files()
@@ -12,9 +16,9 @@ def image_phase_processing():
 #           Handling Keywords       -       Assuminng keywords.txt is derived from book
 def handle_keywords():
     global count_chapters, keywords_words
-    fhandle = open(f'{document_path}keywords.txt')
+    fhandle = open(f'{input_path}keywords.txt')
     original_keywords = fhandle.read()
-    count_chapters = len(open(f'{document_path}keywords.txt').readlines())
+    count_chapters = len(open(f'{input_path}keywords.txt').readlines())
     fhandle.close()
 
     print("-" * 100)
@@ -27,17 +31,19 @@ def handle_keywords():
     i = 0
     while i < count_chapters:
         keywords_words[i] = keywords_words[i].split()
-        keywords_words[i] = [element.lower() for element in keywords_words[i]]  # converting to lower case
+        # converting to lower case
+        keywords_words[i] = [element.lower() for element in keywords_words[i]]
         print(f"{i+1}. {keywords_words[i]}")
         i += 1
-    
+
 
 #           Handling Questions
 def handle_questions():
-    global count_chapters, keywords_words, questions_lines,result
-    fhandle = open(f'{document_path}scannedquestion.txt')
+    global count_chapters, keywords_words, questions_lines, result
+    fhandle = open(f'{input_path}scannedquestion.txt')
     original_questions = fhandle.read()
-    count_questions = len(open(f'{document_path}scannedquestion.txt').readlines())
+    count_questions = len(
+        open(f'{input_path}scannedquestion.txt').readlines())
     fhandle.close()
 
     print("-" * 100)
@@ -47,7 +53,8 @@ def handle_questions():
     questions_words = original_questions.split("\n")
     questions_lines_temp = []
     questions_lines_temp = questions_lines.copy()
-    questions_lines_temp = [element.lower() for element in questions_lines_temp]
+    questions_lines_temp = [element.lower()
+                            for element in questions_lines_temp]
     i = 0
     while i < count_questions:
         questions_words[i] = questions_words[i].split()
@@ -65,7 +72,8 @@ def handle_questions():
             k = 0
             while k < count_keywords_words:         # Keywords Word, k
                 if questions_lines_temp[i].count(keywords_words[j][k]) != 0:
-                    match_point[j] += 1 # questions_lines_temp[i].count(keywords_words[j][k])
+                    # questions_lines_temp[i].count(keywords_words[j][k])
+                    match_point[j] += 1
                 k += 1
             j += 1
         print(f'{i+1}. {match_point}')
@@ -81,7 +89,7 @@ def save_questions():
     print("[INFO] Saving Sorted Questions")
     list_chapters = [*range(0, count_chapters, 1)]
     for i in list_chapters:
-        f = open(f"output/Chapter{i+1}.txt", "w+")
+        f = open(f"{output_path}/Chapter{i+1}.txt", "w+")
         for j in range(len(result)):
             if (i == result[j]):
                 # print(f"chapter: {i}, result index: {j}, question:{result[j]}")
@@ -90,8 +98,28 @@ def save_questions():
 
 
 if __name__ == '__main__':
-    print("Running...")
-    # image_phase_processing()
-    handle_keywords()
-    handle_questions()
-    save_questions()
+    utils.clearConsole()
+    print("WELCOME TO QUESTACK\n"+"-"*20)
+    print("A program that automatically organizes questions from your question bank according to it's respective chapters that it belongs to using our scoring algorithm.")
+    print("-" * 100)
+    print("ReadMe:\n[File iNFO]"
+          "\n - 'inputs/keywords.txt': Keywords are seperated by single space in each line representing keywords of the chapter in ascending order."
+          "\n\tEvery line represents single chapter in ascending order."
+          "\n - 'inputs/scannedquestion.txt': Every line represents a single question."
+          "\n[Mode iNFO]"
+          "\nThere are two modes you can work on: Manual Mode & Automatic Mode."
+          "\nIn Manual Mode, you need to manually prepare 'inputs/keywords.txt' and 'inputs/scannedquestion.txt'"
+          "\nIn Automatic Mode, insert the book as 'inputs/book.pdf' and question bank as 'inputs/question.pdf'."
+          "\n\tYou will also need to mention page intervals of every chapters of the book.")
+    mode = input("Enter your choice:\n1. Manual Mode\n2. Automatic Mode\n-> ")
+    if (mode == '1'):
+        print("-" * 100 + "\nManual Mode")
+        handle_keywords()
+        handle_questions()
+        save_questions()
+    elif (mode == '2'):
+        print("-" * 100 + "\Automatic Mode")
+        pdf_processing.main()
+        handle_keywords()
+        handle_questions()
+        save_questions()

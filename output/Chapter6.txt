@@ -1,1 +1,0 @@
-10. What is pseudo and real parallelism? Explain Flynn's Classification. [4+4]

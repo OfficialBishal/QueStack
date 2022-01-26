@@ -4,7 +4,7 @@ from PIL import Image
 from pytesseract import image_to_string
 
 image_path = 'images/'
-document_path = 'document/'
+input_path = 'inputs/'
 
 
 def rename_files():
@@ -36,7 +36,7 @@ def convert_images_to_text():
         text = image_to_string(img, lang='eng')
         initial_text += text
 
-    with open(f"{document_path}scannedquestion.txt", mode='w') as file:
+    with open(f"{input_path}scannedquestion.txt", mode='w') as file:
             file.write(initial_text)
     print(
-        f'Successful: Questions(image) -> Questions(text)\nLocation: {document_path}scannedquestion.txt')
+        f'Successful: Questions(image) -> Questions(text)\nLocation: {input_path}scannedquestion.txt')
