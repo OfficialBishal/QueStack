@@ -121,12 +121,17 @@ def extract_keywords():
         f'[INFO]Extraction Successful: Book({input_path}book.pdf) -> keywords({input_path}keywords.txt)')
 
 
+def extract_questions():
+    print("-"*100, "\n[INFO]Extracting questions from question.pdf...")
+
+
 def main():
 
     if utils.count_files(pdfs_path) != 0:
         merge_pdf()
 
     extract_keywords()
+    extract_questions()
 
 
 if __name__ == "__main__":
